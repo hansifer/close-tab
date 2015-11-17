@@ -1,19 +1,24 @@
 {
-   "version": "0.2",
+   "version": "1",
+   "minimum_chrome_version": "42",
    "name": "CloseTab",
    "description": "Add a \"Close tab\" entry to the page context menu",
    "default_locale": "en",
-   "minimum_chrome_version": "22",
    "manifest_version": 2,
-   "options_page": "o.html",
-   "icons": { 
-      "16": "i/16x.png",
-      "48": "i/48x.png",
-      "128": "i/128x.png" },
-   "background":  {
+   "options_page": "options.html",
+   "icons": {
+      "16": "img/logo16.png",
+      "48": "img/logo48.png",
+      "128": "img/logo128.png"
+   },
+   "background": {
       "scripts": [
-         "bg.js" ] },
+         "common.js",
+         "bg.js"
+      ]
+   },
    "content_security_policy": "script-src 'self'; object-src 'self'",
-   "permissions": [ 
-      "contextMenus" ] 
+   "permissions": [
+      "contextMenus"
+   ]
 }
