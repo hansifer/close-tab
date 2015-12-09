@@ -1,16 +1,16 @@
 (function(doc) {
 
-	var shortcutKey = doc.getElementById('shortcutKey');
+	var shortcutKey = doc.getElementById('shortcut-key');
 
 	shortcutKey.addEventListener('change', function() {
-		chrome.contextMenus.update('1', {
-			title: contextMenuText(shortcutKey.value)
+		chrome.contextMenus.update('shortcut-key', {
+			title: contextMenuLabel(shortcutKey.value)
 		});
 
-		localStorage.setItem('shortcutKey', shortcutKey.value);
+		set('shortcut-key', shortcutKey.value);
 	});
 
-	shortcutKey.value = get('shortcutKey');
+	shortcutKey.value = get('shortcut-key');
 
 	doc.body.style.display = '';
 	shortcutKey.focus();

@@ -1,16 +1,20 @@
 {
-   "version": "1",
+   "version": "1.1",
    "minimum_chrome_version": "42",
    "name": "CloseTab",
    "description": "Add a \"Close tab\" entry to the page context menu",
    "default_locale": "en",
    "manifest_version": 2,
-   "options_page": "options.html",
+   "options_ui": {
+      "page": "options.html",
+      "chrome_style": true
+   },
    "icons": {
       "16": "img/logo16.png",
       "48": "img/logo48.png",
       "128": "img/logo128.png"
    },
+   "browser_action": {},
    "background": {
       "scripts": [
          "common.js",
