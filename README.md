@@ -7,4 +7,4 @@ The menu item shortcut key is customizable in case the default (C) collides with
 
 Available for [Chrome](https://chrome.google.com/webstore/detail/closetab/lnchemdcmhoccciihokpdkkekmnejfhj) and Opera.
 
-->![](http://hansifer.com/CloseTab/screenshot_chrome.png)<-
+<div align="center"><img src="http://hansifer.com/CloseTab/screenshot_chrome.png"></div>
