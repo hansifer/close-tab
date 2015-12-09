@@ -1,3 +1,5 @@
+/* global chrome:true, contextMenuLabel:true, get:true, set:true */
+
 (function(doc) {
 
 	var shortcutKey = doc.getElementById('shortcut-key');

@@ -1,0 +1,29 @@
+{
+  "name": "CloseTab",
+  "description": "A browser extension that adds a \"Close tab\" entry to the page context menu",
+  "keywords": [
+    "browser",
+    "extension",
+    "tabs",
+    "productivity"
+  ],
+  "version": "1.2.0",
+  "author": {
+    "name": "Hansifer"
+  },
+  "homepage": "https://github.com/hansifer/CloseTab",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hansifer/CloseTab.git"
+  },
+  "bugs": {
+    "url": "http://github.com/hansifer/CloseTab/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "0.7.x",
+    "grunt-contrib-copy": "0.8.x",
+    "grunt-contrib-jshint": "0.11.x"
+  }
+}

@@ -1,3 +1,5 @@
+/* exported contextMenuLabel, get, set */
+
 function contextMenuLabel(shortcutKey) {
     switch (shortcutKey) {
         case 'W':
