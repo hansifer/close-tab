@@ -1,4 +1,4 @@
-CloseTab
+<img src="http://hansifer.com/CloseTab/githubTitle.png">
 ========
 
 #### A browser extension that adds a `Close tab` entry to the page context menu
