@@ -17,12 +17,10 @@ module.exports = function(grunt) {
 			}
 		},
 		clean: {
-			dist_chrome: ['dist/chrome/*'],
-			dist_opera: ['dist/opera/*'],
-			manifest_chrome: ['dist/chrome/manifest_*.json'],
-			manifest_opera: ['dist/opera/manifest_*.json'],
-			options_chrome: ['dist/chrome/options_tab.html'],
-			options_opera: ['dist/opera/options_inline.html']
+			pre_chrome: ['dist/chrome/*'],
+			pre_opera: ['dist/opera/*'],
+			post_chrome: ['dist/chrome/manifest_*.json', 'dist/chrome/options_tab.html', 'dist/chrome/img/logo16_opera.png', 'dist/chrome/img/logo19_opera.png', 'dist/chrome/img/logo38_opera.png'],
+			post_opera: ['dist/opera/manifest_*.json', 'dist/opera/options_inline.html', 'dist/opera/img/logo16.png', 'dist/opera/img/logo19.png', 'dist/opera/img/logo38.png']
 		},
 		copy: {
 			dist_chrome: {
@@ -67,6 +65,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	grunt.registerTask('default', ['jshint', 'chrome', 'opera']);
-	grunt.registerTask('chrome', ['jshint', 'clean:dist_chrome', 'copy:dist_chrome', 'copy:manifest_chrome', 'clean:manifest_chrome', 'clean:options_chrome']);
-	grunt.registerTask('opera', ['jshint', 'clean:dist_opera', 'copy:dist_opera', 'copy:manifest_opera', 'clean:manifest_opera', 'clean:options_opera']);
+	grunt.registerTask('chrome', ['jshint', 'clean:pre_chrome', 'copy:dist_chrome', 'copy:manifest_chrome', 'clean:post_chrome']);
+	grunt.registerTask('opera', ['jshint', 'clean:pre_opera', 'copy:dist_opera', 'copy:manifest_opera', 'clean:post_opera']);
 };
