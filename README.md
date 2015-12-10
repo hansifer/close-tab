@@ -17,4 +17,7 @@ CloseTab enables you to close a web page in a snap with a right mouse click anyw
 
 This works well with the dual keyboard/mouse hand positioning commonly employed during web browser engagement, as depicted in this professionally-rendered illustration:
 
-<div align="center" padding="60px"><img src="http://hansifer.com/CloseTab/hand_positioning.jpg"></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+<div align="center"><img src="http://hansifer.com/CloseTab/hand_positioning.jpg"></div>
