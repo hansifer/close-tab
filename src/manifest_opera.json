@@ -1,6 +1,6 @@
 {
    "name": "CloseTab",
-   "version": "1.4",
+   "version": "1.5",
    "minimum_opera_version": "29",
    "description": "Add a \"Close tab\" entry to the page context menu",
    "default_locale": "en",

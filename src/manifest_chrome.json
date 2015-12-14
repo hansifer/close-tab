@@ -1,6 +1,6 @@
 {
    "name": "CloseTab",
-   "version": "1.5",
+   "version": "1.6",
    "minimum_chrome_version": "42",
    "description": "Add a \"Close tab\" entry to the page context menu",
    "default_locale": "en",
