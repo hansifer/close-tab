@@ -21,12 +21,12 @@
     </style>
 </head>
 
-<body style="display:none;font-size:18px;margin-top:30px;">
-    <div style="text-align:center;">
+<body style="font-size:18px;margin-top:30px;text-align:center;">
+    <div>
         <img src="img/logo48.png" style="vertical-align:middle;">
         <span style="vertical-align:middle;font-size:28px;margin-left:10px;">CloseTab Options</span>
     </div>
-    <div style="text-align:center;margin-top:80px;">
+    <div id="shortcut-key-supported" style="display:none;margin-top:80px;">
         <span>Menu item shortcut key</span>
         <select id="shortcut-key">
             <option value="C">C</option>
@@ -39,6 +39,9 @@
         </select>
         <div class="option-desc">This key can be pressed to activate the "Close tab" menu item
             <br>instead of clicking on it</div>
+    </div>
+    <div id="shortcut-key-not-supported" class="option-desc" style="display:none;">
+        No options for OS X systems
     </div>
     <script src="common.js"></script>
     <script src="options.js"></script>

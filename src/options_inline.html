@@ -11,19 +11,24 @@
     </style>
 </head>
 
-<body style="display:none;text-align:center;">
-    <span style="margin-right:10px;">Menu item shortcut key</span>
-    <select id="shortcut-key">
-        <option value="C">C</option>
-        <option value="W">W</option>
-        <option value="Q">Q</option>
-        <option value="X">X</option>
-        <option value="E">E</option>
-        <option value="D">D</option>
-        <option value="Z">Z</option>
-    </select>
-    <div class="option-desc">This key can be pressed to activate the "Close tab" menu item
-        <br>instead of clicking on it</div>
+<body style="text-align:center;">
+    <div id="shortcut-key-supported" style="display:none;">
+        <span style="margin-right:10px;">Menu item shortcut key</span>
+        <select id="shortcut-key">
+            <option value="C">C</option>
+            <option value="W">W</option>
+            <option value="Q">Q</option>
+            <option value="X">X</option>
+            <option value="E">E</option>
+            <option value="D">D</option>
+            <option value="Z">Z</option>
+        </select>
+        <div class="option-desc">This key can be pressed to activate the "Close tab" menu item
+            <br>instead of clicking on it</div>
+    </div>
+    <div id="shortcut-key-not-supported" class="option-desc" style="display:none;">
+        No options for OS X systems
+    </div>
     <script src="common.js"></script>
     <script src="options.js"></script>
 </body>

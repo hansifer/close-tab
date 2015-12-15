@@ -2,19 +2,27 @@
 
 (function(doc) {
 
-	var shortcutKey = doc.getElementById('shortcut-key');
+	chrome.runtime.getPlatformInfo(function(info) {
+		// todo: tests for other OS's
+		if (info.os === 'mac') {
+			doc.getElementById('shortcut-key-not-supported').style.display = '';
+		} else {
+			doc.getElementById('shortcut-key-supported').style.display = '';
 
-	shortcutKey.addEventListener('change', function() {
-		chrome.contextMenus.update('shortcut-key', {
-			title: contextMenuLabel(shortcutKey.value)
-		});
+			var shortcutKey = doc.getElementById('shortcut-key');
 
-		set('shortcut-key', shortcutKey.value);
+			shortcutKey.addEventListener('change', function() {
+				chrome.contextMenus.update('shortcut-key', {
+					title: contextMenuLabel(shortcutKey.value)
+				});
+
+				set('shortcut-key', shortcutKey.value);
+			});
+
+			shortcutKey.value = get('shortcut-key');
+
+			shortcutKey.focus();
+		}
 	});
-
-	shortcutKey.value = get('shortcut-key');
-
-	doc.body.style.display = '';
-	shortcutKey.focus();
 
 }(document));
