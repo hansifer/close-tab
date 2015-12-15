@@ -24,4 +24,6 @@ This works well with the dual keyboard/mouse hand positioning commonly employed 
 
 #### OS X<a name="osx"></a>
 
-CloseTab has limited usefulness in OS X environments because OS X lacks customizable accelerator keys for menu items. The first letter of a menu item's title always serves as its accelerator key. Furthermore, typing the first letter of the item's title simply selects the item. *It doesn't activate it*. Contrary to MS Windows behavior, this holds true even if there is only one item in the menu starting with that letter.
+CloseTab has limited usefulness in OS X environments because OS X lacks customizable accelerator keys for menu items. The first letter of a menu item's title always serves as its accelerator key. 
+
+Furthermore, typing the first letter of the item's title simply selects the item. *It doesn't activate it*. Contrary to MS Windows behavior, this holds true even if there is only one item in the menu starting with that letter.
