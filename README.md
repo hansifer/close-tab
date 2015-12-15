@@ -3,7 +3,7 @@
 
 #### A browser extension that adds a `Close tab` entry to the page context menu
 
-Available for [Chrome](https://chrome.google.com/webstore/detail/closetab/lnchemdcmhoccciihokpdkkekmnejfhj) and [Opera](https://addons.opera.com/en/extensions/details/closetab/).
+Available for [Chrome](https://chrome.google.com/webstore/detail/closetab/lnchemdcmhoccciihokpdkkekmnejfhj) and [Opera](https://addons.opera.com/en/extensions/details/closetab/), but [not Safari](#osx)
 
 <div align="center"><img src="http://hansifer.com/CloseTab/screenshot_chrome.png"></div>
 
@@ -21,3 +21,7 @@ This works well with the dual keyboard/mouse hand positioning commonly employed 
 <div>&nbsp;</div>
 
 <div align="center"><img src="http://hansifer.com/CloseTab/hand_positioning.jpg"></div>
+
+#### OS X<a name="osx"></a>
+
+CloseTab has limited usefulness in OS X environments because OS X lacks customizable accelerator keys for menu items. The first letter of a menu item's title always serves as its accelerator key. Furthermore, typing the first letter of the item's title simply selects the item. *It doesn't activate it*. Contrary to MS Windows behavior, this holds true even if there is only one item in the menu starting with that letter.
