@@ -28,4 +28,4 @@ CloseTab has limited usefulness in OS X environments because OS X lacks customiz
 
 Furthermore, typing the first letter of an item's title simply selects the item. *It doesn't activate it*. Contrary to MS Windows behavior, this holds true even if there is only one item in the menu starting with the same letter.
 
-For the above reasons, a Safari port of this extension is relatively pointless. For Chrome and Opera on OS X, the Options page is altered in-flight to hide the menu item shortcut key option.
+For the above reasons, a Safari port of this extension is relatively pointless. For Chrome and Opera on OS X, the Options page is altered in-flight to hide the menu item shortcut key option. Although not ideal, this seems to be the best approach since extensions currently cannot target OS-specific platforms (eg, via manifest or web store settings), nor is there any means beyond a static manifest-based specification for controlling access to extension options as presented by the browser.
