@@ -26,4 +26,6 @@ This works well with the dual keyboard/mouse hand positioning commonly employed 
 
 CloseTab has limited usefulness in OS X environments because OS X lacks customizable accelerator keys for menu items. The first letter of a menu item's title always serves as its accelerator key. 
 
-Furthermore, typing the first letter of the item's title simply selects the item. *It doesn't activate it*. Contrary to MS Windows behavior, this holds true even if there is only one item in the menu starting with that letter.
+Furthermore, typing the first letter of an item's title simply selects the item. *It doesn't activate it*. Contrary to MS Windows behavior, this holds true even if there is only one item in the menu starting with the same letter.
+
+For the above reasons, a Safari port of this extension is relatively pointless. For Chrome and Opera on OS X, the Options page is altered in-flight to hide the menu item shortcut key option.
