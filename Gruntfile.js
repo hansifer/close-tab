@@ -14,6 +14,18 @@ module.exports = function(grunt) {
 				options: {
 					jshintrc: '.jshintrc'
 				}
+			},
+			dist_chrome: {
+				src: ['dist/chrome/*.js'],
+				options: {
+					jshintrc: '.jshintrc'
+				}
+			},
+			dist_opera: {
+				src: ['dist/opera/*.js'],
+				options: {
+					jshintrc: '.jshintrc'
+				}
 			}
 		},
 		clean: {
@@ -92,9 +104,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-compress');
 
-	grunt.registerTask('default', ['jshint', 'chrome', 'opera']);
-	grunt.registerTask('chrome', ['jshint', 'clean:pre_chrome', 'copy:dist_chrome', 'copy:manifest_chrome', 'clean:post_chrome']);
-	grunt.registerTask('opera', ['jshint', 'clean:pre_opera', 'copy:dist_opera', 'copy:manifest_opera', 'clean:post_opera']);
+	grunt.registerTask('default', ['jshint:gruntfile', 'jshint:src', 'chrome', 'opera']);
+
+	grunt.registerTask('chrome', ['clean:pre_chrome', 'copy:dist_chrome', 'copy:manifest_chrome', 'clean:post_chrome', 'jshint:dist_chrome']);
+
+	grunt.registerTask('opera', ['clean:pre_opera', 'copy:dist_opera', 'copy:manifest_opera', 'clean:post_opera', 'jshint:dist_opera']);
 
 	var taskQueue;
 	grunt.registerTask('popTaskConfig', 'pop and populate a task config from taskQueue', function() {
