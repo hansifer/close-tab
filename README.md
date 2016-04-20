@@ -1,15 +1,15 @@
-<img src="http://hansifer.com/CloseTab/githubTitle.png">
+<img src="http://hansifer.com/hosted-assets/closetab/githubTitle.png">
 ========
 
 #### A browser extension that adds a `Close tab` entry to the page context menu
 
 Available for [Chrome](https://chrome.google.com/webstore/detail/closetab/lnchemdcmhoccciihokpdkkekmnejfhj) and [Opera](https://addons.opera.com/en/extensions/details/closetab/), but [not Safari](#osx)
 
-<div align="center"><img src="http://hansifer.com/CloseTab/screenshot_chrome.png"></div>
+<div align="center"><img src="http://hansifer.com/hosted-assets/closetab/screenshot_chrome.png"></div>
 
 The menu item shortcut key is customizable in case the default (C) collides with that of another menu item.
 
-<div align="center"><img src="http://hansifer.com/CloseTab/options.png"></div>
+<div align="center"><img src="http://hansifer.com/hosted-assets/closetab/options.png"></div>
 
 #### Why is this useful?
 
@@ -20,7 +20,7 @@ This works well with the dual keyboard/mouse hand positioning commonly employed 
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 
-<div align="center"><img src="http://hansifer.com/CloseTab/hand_positioning.jpg"></div>
+<div align="center"><img src="http://hansifer.com/hosted-assets/closetab/hand_positioning.jpg"></div>
 
 #### OS X<a name="osx"></a>
 
