@@ -5,18 +5,21 @@
     <title>CloseTab Options</title>
     <style type="text/css">
       select {
-        background-color: #e4f2ff;
-        color: #2b9dff;
-        border: none;
+        border: 8px solid transparent;
+        outline: none;
         margin-left: 10px;
-        padding: 0 10px;
         font-size: 18px;
-        height: 33px;
+      }
+
+      select:hover,
+      select:focus {
+        background-color: #eee;
+        border-color: #eee;
       }
 
       .option-desc {
         color: #aaa;
-        margin-top: 35px;
+        margin-top: 25px;
       }
     </style>
   </head>
@@ -33,9 +36,9 @@
     </div>
     <div
       id="shortcut-key-supported"
-      style="display: none; margin-top: 80px"
+      style="display: none; margin-top: 50px"
     >
-      <span>Menu item shortcut key</span>
+      <span>Menu item shortcut key:</span>
       <select id="shortcut-key">
         <option value="C">C</option>
         <option value="W">W</option>
@@ -46,8 +49,8 @@
         <option value="Z">Z</option>
       </select>
       <div class="option-desc">
-        This key can be pressed to activate the "Close tab" menu item
-        <br />instead of clicking on it
+        Press this key to activate the "Close tab" menu item <br />instead of
+        clicking it
       </div>
     </div>
     <div
@@ -55,9 +58,11 @@
       class="option-desc"
       style="display: none"
     >
-      No options for OS X systems
+      No options for macOS
     </div>
-    <script src="common.js"></script>
-    <script src="options.js"></script>
+    <script
+      src="options.js"
+      type="module"
+    ></script>
   </body>
 </html>
