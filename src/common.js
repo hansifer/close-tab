@@ -1,14 +1,9 @@
-/* exported contextMenuLabel, get, set */
+const DEFAULT_KEY = 'C';
+const OTHER_KEYS = ['W', 'Q', 'X', 'E', 'D', 'Z'];
 
 export function contextMenuLabel(shortcutKey) {
-  switch (shortcutKey) {
-    case 'W':
-    case 'Q':
-    case 'X':
-    case 'E':
-    case 'D':
-    case 'Z':
-      return 'Close tab  (&' + shortcutKey + ')';
+  if (OTHER_KEYS.includes(shortcutKey)) {
+    return 'Close tab  (&' + shortcutKey + ')';
   }
 
   return '&Close tab';
@@ -21,14 +16,13 @@ export function get(key) {
     val = localStorage.getItem('shortcutKey');
   }
 
-  if (val) {
-    return val;
-  }
+  if (val) return val;
 
   // return default
+
   switch (key) {
     case 'shortcut-key':
-      return 'C';
+      return DEFAULT_KEY;
   }
 }
 
