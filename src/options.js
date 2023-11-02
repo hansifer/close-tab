@@ -1,26 +1,24 @@
-/* global chrome:true, contextMenuLabel:true, get:true, set:true */
+import { get, set, contextMenuLabel } from './common.js';
 
-(function (doc) {
-  chrome.runtime.getPlatformInfo(function (info) {
-    // todo: support for other OS's
-    if (info.os === 'mac') {
-      doc.getElementById('shortcut-key-not-supported').style.display = '';
-    } else {
-      doc.getElementById('shortcut-key-supported').style.display = '';
+chrome.runtime.getPlatformInfo(function (info) {
+  // todo: support for other OS's
+  if (info.os === 'mac') {
+    document.getElementById('shortcut-key-not-supported').style.display = '';
+  } else {
+    document.getElementById('shortcut-key-supported').style.display = '';
 
-      var shortcutKey = doc.getElementById('shortcut-key');
+    var shortcutKey = document.getElementById('shortcut-key');
 
-      shortcutKey.addEventListener('change', function () {
-        chrome.contextMenus.update('shortcut-key', {
-          title: contextMenuLabel(shortcutKey.value),
-        });
-
-        set('shortcut-key', shortcutKey.value);
+    shortcutKey.addEventListener('change', function () {
+      chrome.contextMenus.update('shortcut-key', {
+        title: contextMenuLabel(shortcutKey.value),
       });
 
-      shortcutKey.value = get('shortcut-key');
+      set('shortcut-key', shortcutKey.value);
+    });
 
-      shortcutKey.focus();
-    }
-  });
-})(document);
+    shortcutKey.value = get('shortcut-key');
+
+    shortcutKey.focus();
+  }
+});
