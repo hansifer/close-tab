@@ -1,6 +1,6 @@
 import { get, set, contextMenuLabel } from './common.js';
 
-chrome.runtime.getPlatformInfo(function (info) {
+chrome.runtime.getPlatformInfo((info) => {
   // todo: support for other OS's
   if (info.os === 'mac') {
     document.getElementById('shortcut-key-not-supported').style.display = '';
