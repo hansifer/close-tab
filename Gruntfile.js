@@ -26,13 +26,21 @@ module.exports = function(grunt) {
 				options: {
 					jshintrc: '.jshintrc'
 				}
+			},
+			dist_firefox: {
+				src: ['dist/firefox/*.js'],
+				options: {
+					jshintrc: '.jshintrc'
+				}
 			}
 		},
 		clean: {
 			pre_chrome: ['dist/chrome/*'],
 			pre_opera: ['dist/opera/*'],
+			pre_firefox: ['dist/firefox/*'],
 			post_chrome: ['dist/chrome/manifest_*.json', 'dist/chrome/options_tab.html', 'dist/chrome/img/logo16_opera.png', 'dist/chrome/img/logo19_opera.png', 'dist/chrome/img/logo38_opera.png'],
-			post_opera: ['dist/opera/manifest_*.json', 'dist/opera/options_inline.html', 'dist/opera/img/logo16.png', 'dist/opera/img/logo19.png', 'dist/opera/img/logo38.png']
+			post_opera: ['dist/opera/manifest_*.json', 'dist/opera/options_inline.html', 'dist/opera/img/logo16.png', 'dist/opera/img/logo19.png', 'dist/opera/img/logo38.png'],
+			post_firefox: ['dist/firefox/manifest_*.json', 'dist/firefox/options_inline.html', 'dist/firefox/img/logo16.png', 'dist/firefox/img/logo19.png', 'dist/firefox/img/logo38.png']
 		},
 		copy: {
 			dist_chrome: {
