@@ -4,17 +4,17 @@
   "minimum_chrome_version": "42",
   "description": "Add a tab close action to the page context menu",
   "default_locale": "en",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "options_ui": {
     "page": "options_inline.html",
-    "chrome_style": true
+    "open_in_tab": false
   },
   "icons": {
     "16": "img/logo16.png",
     "48": "img/logo48.png",
     "128": "img/logo128.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "19": "img/logo19.png",
       "38": "img/logo38.png"
@@ -22,8 +22,11 @@
     "default_title": "Close selected tab"
   },
   "background": {
-    "scripts": ["common.js", "bg.js"]
+    "service_worker": "bg.js",
+    "type": "module"
   },
-  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
   "permissions": ["contextMenus", "storage"]
 }
