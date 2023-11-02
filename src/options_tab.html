@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>CloseTab Options</title>
     <style type="text/css">
-    select {
-        background-color: #E4F2FF;
-        color: #2B9DFF;
+      select {
+        background-color: #e4f2ff;
+        color: #2b9dff;
         border: none;
         margin-left: 10px;
         padding: 0 10px;
         font-size: 18px;
         height: 33px;
-    }
-    
-    .option-desc {
+      }
+
+      .option-desc {
         color: #aaa;
         margin-top: 35px;
-    }
+      }
     </style>
-</head>
+  </head>
 
-<body style="font-size:18px;margin-top:30px;text-align:center;">
+  <body style="font-size: 18px; margin-top: 30px; text-align: center">
     <div>
-        <img src="img/logo48.png" style="vertical-align:middle;">
-        <span style="vertical-align:middle;font-size:28px;margin-left:10px;">CloseTab Options</span>
+      <img
+        src="img/logo48.png"
+        style="vertical-align: middle"
+      />
+      <span style="vertical-align: middle; font-size: 28px; margin-left: 10px"
+        >CloseTab Options</span
+      >
     </div>
-    <div id="shortcut-key-supported" style="display:none;margin-top:80px;">
-        <span>Menu item shortcut key</span>
-        <select id="shortcut-key">
-            <option value="C">C</option>
-            <option value="W">W</option>
-            <option value="Q">Q</option>
-            <option value="X">X</option>
-            <option value="E">E</option>
-            <option value="D">D</option>
-            <option value="Z">Z</option>
-        </select>
-        <div class="option-desc">This key can be pressed to activate the "Close tab" menu item
-            <br>instead of clicking on it</div>
+    <div
+      id="shortcut-key-supported"
+      style="display: none; margin-top: 80px"
+    >
+      <span>Menu item shortcut key</span>
+      <select id="shortcut-key">
+        <option value="C">C</option>
+        <option value="W">W</option>
+        <option value="Q">Q</option>
+        <option value="X">X</option>
+        <option value="E">E</option>
+        <option value="D">D</option>
+        <option value="Z">Z</option>
+      </select>
+      <div class="option-desc">
+        This key can be pressed to activate the "Close tab" menu item
+        <br />instead of clicking on it
+      </div>
     </div>
-    <div id="shortcut-key-not-supported" class="option-desc" style="display:none;">
-        No options for OS X systems
+    <div
+      id="shortcut-key-not-supported"
+      class="option-desc"
+      style="display: none"
+    >
+      No options for OS X systems
     </div>
     <script src="common.js"></script>
     <script src="options.js"></script>
-</body>
-
+  </body>
 </html>
