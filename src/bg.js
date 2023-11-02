@@ -1,4 +1,4 @@
-/* global chrome:true, contextMenuLabel:true, get:true */
+import { contextMenuLabel, get } from './common.js';
 
 chrome.contextMenus.create({
   id: 'shortcut-key',
@@ -14,11 +14,11 @@ chrome.contextMenus.create({
     'video',
     'audio',
   ], //  eliminate 'browser_action', 'page_action'
-  onclick: function (info, t) {
-    chrome.tabs.remove(t.id);
+  onclick: (_, tab) => {
+    chrome.tabs.remove(tab.id);
   },
 });
 
-chrome.browserAction.onClicked.addListener(function (t) {
-  chrome.tabs.remove(t.id);
+chrome.browserAction.onClicked.addListener((tab) => {
+  chrome.tabs.remove(tab.id);
 });
