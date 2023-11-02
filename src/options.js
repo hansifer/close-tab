@@ -7,18 +7,18 @@ chrome.runtime.getPlatformInfo((info) => {
   } else {
     document.getElementById('shortcut-key-supported').style.display = '';
 
-    var shortcutKey = document.getElementById('shortcut-key');
+    const keySelector = document.getElementById('shortcut-key');
 
-    shortcutKey.addEventListener('change', function () {
+    keySelector.addEventListener('change', () => {
       chrome.contextMenus.update('shortcut-key', {
-        title: contextMenuLabel(shortcutKey.value),
+        title: contextMenuLabel(keySelector.value),
       });
 
-      set('shortcut-key', shortcutKey.value);
+      set('shortcut-key', keySelector.value);
     });
 
-    shortcutKey.value = get('shortcut-key');
+    keySelector.value = get('shortcut-key');
 
-    shortcutKey.focus();
+    keySelector.focus();
   }
 });
