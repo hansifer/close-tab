@@ -19,5 +19,8 @@
   "bugs": {
     "url": "http://github.com/hansifer/CloseTab/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "0.0.248"
+  }
 }
