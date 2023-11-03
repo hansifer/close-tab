@@ -1,6 +1,6 @@
 #### A browser extension that adds a tab close action to the page context menu
 
-Available for [Chrome](https://chrome.google.com/webstore/detail/closetab/lnchemdcmhoccciihokpdkkekmnejfhj) and [Opera](https://addons.opera.com/en/extensions/details/closetab/), but [not Safari](#macos)
+Available for [Chrome](https://chrome.google.com/webstore/detail/closetab/lnchemdcmhoccciihokpdkkekmnejfhj)
 
 <div align="center"><img src="http://hansifer.com/hosted-assets/closetab/menu.png" width="390"></div>
 
@@ -17,8 +17,8 @@ CloseTab enables you to close a web page with a right mouse click anywhere on th
 
 <div align="center"><img src="http://hansifer.com/hosted-assets/closetab/hand_positioning.jpg" width="450"></div>
 
-#### macOS<a name="macos"></a>
+#### macOS
 
 CloseTab has limited usefulness in macOS because macOS does not have customizable accelerator keys for menu items. The first letter of a menu item's title always serves as its accelerator key. Additionally, typing the first letter of a menu item only selects it; a subsequent Enter key press is required to activate its action.
 
-It's for these reasons that a Safari port of this extension doesn't exist and the options page does not display the menu item shortcut key selector for Chrome and Opera on macOS.
+It's for these reasons that a Safari port of this extension doesn't exist and the extension's options UI doesn't show the menu item shortcut key selector on macOS.
