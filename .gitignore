@@ -4,3 +4,4 @@ node_modules
 dist
 notes.txt
 notes.md
+.DS_Store
