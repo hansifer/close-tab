@@ -10,7 +10,7 @@ The menu item shortcut key is customizable in case the default `c` collides with
 
 #### Why is this useful?
 
-CloseTab enables you to close a web page with a right mouse click anywhere on the page followed by a key press. This is often quicker than moving the mouse cursor up to and clicking the tab's close icon.
+CloseTab enables you to close a web page with a right mouse click anywhere on the page followed by a key press. This is often quicker than moving the mouse cursor up to and clicking the tab's close icon or taking your hand off the mouse to use a keyboard shortcut that requires both hands.
 
 <div>&nbsp;</div>
 <div>&nbsp;</div>
