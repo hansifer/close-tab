@@ -1,24 +1,29 @@
-import { get, set, contextMenuLabel } from './common.js';
-
-chrome.runtime.getPlatformInfo((info) => {
-  // todo: support for other OS's
-  if (info.os === 'mac') {
+chrome.runtime.getPlatformInfo(async ({ os }) => {
+  // todo: consideration for other OS's
+  if (os === 'mac') {
     document.getElementById('shortcut-key-not-supported').style.display = '';
   } else {
-    document.getElementById('shortcut-key-supported').style.display = '';
+    const shortcutKeySelector = document.getElementById('shortcut-key');
 
-    const keySelector = document.getElementById('shortcut-key');
+    for (const shortcutKey of [DEFAULT_SHORTCUT_KEY, ...OTHER_SHORTCUT_KEYS]) {
+      shortcutKeySelector.appendChild(createOption(shortcutKey));
+    }
 
-    keySelector.addEventListener('change', () => {
-      chrome.contextMenus.update('shortcut-key', {
-        title: contextMenuLabel(keySelector.value),
-      });
+    shortcutKeySelector.value = await getShortcutKey();
 
-      set('shortcut-key', keySelector.value);
+    shortcutKeySelector.addEventListener('change', () => {
+      setShortcutKey(shortcutKeySelector.value);
     });
 
-    keySelector.value = get('shortcut-key');
+    document.getElementById('shortcut-key-supported').style.display = '';
 
-    keySelector.focus();
+    shortcutKeySelector.focus();
   }
 });
+
+function createOption(shortcutKey) {
+  const el = document.createElement('option');
+  el.textContent = shortcutKey;
+  el.setAttribute('value', shortcutKey);
+  return el;
+}
