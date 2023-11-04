@@ -19,6 +19,6 @@ CloseTab enables you to close a web page with a right mouse click anywhere on th
 
 #### macOS limitations
 
-CloseTab has limited usefulness in macOS because macOS does not have customizable accelerator keys for menu items. The first letter of a menu item's title always serves as its accelerator key. Additionally, typing the first letter of a menu item only selects it; a subsequent Enter key press is required to activate its action.
+CloseTab has limited usefulness in macOS because macOS does not have customizable accelerator keys for menu items. The first letter of a menu item's title always serves as its accelerator key. Additionally, typing the first letter of a menu item only selects it; a subsequent Enter key press is required to activate it.
 
 It's for these reasons that a Safari port of CloseTab doesn't exist and CloseTab's options UI doesn't show the menu item shortcut key selector on macOS.
