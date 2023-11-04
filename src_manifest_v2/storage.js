@@ -1,13 +1,10 @@
 const OLD_KEY = 'shortcutKey';
 const NEW_KEY = 'shortcut-key';
 
-const cache = {
-  shortcutKey: DEFAULT_SHORTCUT_KEY,
-};
+const cache = {};
 
 const storageInit = new Promise((resolve) => {
   chrome.storage.sync.get((items) => {
-    console.log('initialized');
     Object.assign(cache, items);
     resolve();
   });
@@ -16,9 +13,7 @@ const storageInit = new Promise((resolve) => {
 async function getShortcutKey() {
   await storageInit;
 
-  console.log(cache);
-
-  var localStorageVal =
+  const localStorageVal =
     localStorage.getItem(NEW_KEY) || localStorage.getItem(OLD_KEY);
 
   if (localStorageVal) {

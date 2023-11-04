@@ -1,8 +1,6 @@
 import { DEFAULT_SHORTCUT_KEY } from './config.js';
 
-const cache = {
-  shortcutKey: DEFAULT_SHORTCUT_KEY,
-};
+const cache = {};
 
 const storageInit = chrome.storage.sync.get().then((items) => {
   Object.assign(cache, items);
