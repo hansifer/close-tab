@@ -1,24 +1,28 @@
-import { DEFAULT_SHORTCUT_KEY, OTHER_SHORTCUT_KEYS } from './config.js';
+import { OTHER_SHORTCUT_KEYS } from './config.js';
 import { getShortcutKey } from './storage.js';
 
 const MENU_ID = 'close-tab';
 
 // ------------------------ HANDLE ACTION ------------------------
 
-chrome.contextMenus.create({
-  id: MENU_ID,
-  title: getMenuItemLabel(DEFAULT_SHORTCUT_KEY),
-  // contexts: ['all'],
-  contexts: [
-    'page',
-    'frame',
-    'selection',
-    'link',
-    'editable',
-    'image',
-    'video',
-    'audio',
-  ], //  eliminate 'browser_action', 'page_action'
+chrome.runtime.onInstalled.addListener(async () => {
+  const shortcutKey = await getShortcutKey();
+
+  chrome.contextMenus.create({
+    id: MENU_ID,
+    title: getMenuItemLabel(shortcutKey),
+    // contexts: ['all'],
+    contexts: [
+      'page',
+      'frame',
+      'selection',
+      'link',
+      'editable',
+      'image',
+      'video',
+      'audio',
+    ], //  eliminate 'browser_action', 'page_action'
+  });
 });
 
 chrome.contextMenus.onClicked.addListener(({ menuItemId }, tab) => {
@@ -40,17 +44,7 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
   }
 });
 
-initMenuItemLabel();
-
 // ----------------------------- UTIL -----------------------------
-
-async function initMenuItemLabel() {
-  const shortcutKey = await getShortcutKey();
-
-  if (shortcutKey !== DEFAULT_SHORTCUT_KEY) {
-    updateMenuItemLabel(shortcutKey);
-  }
-}
 
 function updateMenuItemLabel(key) {
   chrome.contextMenus.update(MENU_ID, {
