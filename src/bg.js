@@ -37,6 +37,7 @@ chrome.action.onClicked.addListener((tab) => {
 
 // --------------------- SET MENU ITEM LABEL ---------------------
 
+// todo: does this fire on extension load if data was changed in another synched installation while browser was closed? do we need an extension load event handler that calls updateMenuItemLabel() to ensure most recent value? does this even fire if data is changed in another synched installation WHILE BROWSER IS OPEN?
 chrome.storage.onChanged.addListener((changes, areaName) => {
   if (areaName === 'sync') {
     const newShortcutKey = changes.shortcutKey?.newValue;
