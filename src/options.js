@@ -26,7 +26,7 @@ chrome.runtime.getPlatformInfo(async ({ os }) => {
 
 function createOption(shortcutKey) {
   const el = document.createElement('option');
-  el.textContent = shortcutKey;
+  el.textContent = shortcutKey.toLowerCase();
   el.setAttribute('value', shortcutKey);
   return el;
 }
