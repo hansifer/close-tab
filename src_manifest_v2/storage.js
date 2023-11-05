@@ -1,7 +1,8 @@
 const OLD_KEY = 'shortcutKey';
 const NEW_KEY = 'shortcut-key';
 
-const getStorageItems = () => new Promise(chrome.storage.sync.get);
+const getStorageItems = () =>
+  new Promise((resolve) => chrome.storage.sync.get((items) => resolve(items)));
 
 async function getShortcutKey() {
   const { shortcutKey } = await getStorageItems();
