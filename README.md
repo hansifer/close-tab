@@ -2,7 +2,7 @@
 
 Available for [Chrome](https://chrome.google.com/webstore/detail/closetab/lnchemdcmhoccciihokpdkkekmnejfhj)
 
-<div align="center"><img src="http://hansifer.com/hosted-assets/closetab/menu.png" width="390"></div>
+<div align="center"><img src="http://hansifer.com/hosted-assets/closetab/menu-2.png" width="390"></div>
 
 The menu item shortcut key is customizable in case the default `c` collides with an existing menu item.
 
