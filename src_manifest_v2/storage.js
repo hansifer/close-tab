@@ -1,17 +1,10 @@
 const OLD_KEY = 'shortcutKey';
 const NEW_KEY = 'shortcut-key';
 
-const cache = {};
-
-const storageInit = new Promise((resolve) => {
-  chrome.storage.sync.get((items) => {
-    Object.assign(cache, items);
-    resolve();
-  });
-});
+const getStorageItems = () => new Promise(chrome.storage.sync.get);
 
 async function getShortcutKey() {
-  await storageInit;
+  const { shortcutKey } = await getStorageItems();
 
   const localStorageVal =
     localStorage.getItem(NEW_KEY) || localStorage.getItem(OLD_KEY);
@@ -20,21 +13,23 @@ async function getShortcutKey() {
     localStorage.removeItem(NEW_KEY);
     localStorage.removeItem(OLD_KEY);
 
-    if (!cache.shortcutKey) {
-      cache.shortcutKey = localStorageVal;
-      chrome.storage.sync.set(cache);
+    if (!shortcutKey) {
+      chrome.storage.sync.set({
+        shortcutKey: localStorageVal,
+      });
+
+      return localStorageVal;
     }
   }
 
-  return cache.shortcutKey || DEFAULT_SHORTCUT_KEY;
+  return shortcutKey || DEFAULT_SHORTCUT_KEY;
 }
 
-async function setShortcutKey(val) {
-  await storageInit;
-
-  cache.shortcutKey = val;
-  chrome.storage.sync.set(cache);
-
+function setShortcutKey(val) {
   localStorage.removeItem(NEW_KEY);
   localStorage.removeItem(OLD_KEY);
+
+  return chrome.storage.sync.set({
+    shortcutKey: val,
+  });
 }
