@@ -4,22 +4,41 @@
     <meta charset="utf-8" />
     <title>Close Tab Options</title>
     <style type="text/css">
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+      }
+
       .option-desc {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
         color: hsl(0, 0%, 60%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      a:hover {
+        color: #000;
+      }
+
+      .buy-me-a-coffee {
+        margin-top: 30px;
+        filter: grayscale(1);
+      }
+
+      .buy-me-a-coffee:hover {
+        filter: none;
       }
     </style>
   </head>
-
-  <body
-    style="
-      height: 90px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    "
-  >
+  <body>
     <div
       id="shortcut-key-supported"
       style="display: none"
@@ -39,7 +58,27 @@
       class="option-desc"
       style="display: none"
     >
-      No options for macOS
+      <div>No options for macOS</div>
+      <div>
+        <a
+          href="https://github.com/hansifer/close-tab#macos-limitations"
+          target="_blank"
+        >
+          Learn more
+        </a>
+      </div>
+    </div>
+    <div class="buy-me-a-coffee">
+      <a
+        href="https://www.buymeacoffee.com/hansifer"
+        target="_blank"
+      >
+        <img
+          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+          alt="Buy Me A Coffee"
+          style="height: 30px !important; width: 130px !important"
+        />
+      </a>
     </div>
     <script
       src="options.js"
