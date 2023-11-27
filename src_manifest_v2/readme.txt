@@ -1,1 +1,0 @@
-This folder contains an interim version of CloseTab to facilitate migration from Chrome extension manifest v2 to manifest v3. Deploy this version, allow a few weeks for data migration to occur, then delete this folder and deploy code in `src`.
