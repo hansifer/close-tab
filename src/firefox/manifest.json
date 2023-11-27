@@ -1,5 +1,5 @@
 {
-   "name": "CloseTab",
+   "name": "Close Tab",
    "version": "1.5",
    "description": "Add a \"Close tab\" entry to the page context menu",
    "default_locale": "en",
@@ -27,9 +27,9 @@
    "permissions": [
       "contextMenus"
    ],
-  "applications": {
-    "gecko": {
-      "id": "gecko_id@closetab.com"
-    }
-  }
+   "applications": {
+      "gecko": {
+         "id": "gecko_id@closetab.com"
+      }
+   }
 }

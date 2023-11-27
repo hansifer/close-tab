@@ -1,5 +1,5 @@
 {
-  "name": "CloseTab",
+  "name": "close-tab",
   "description": "A browser extension that adds a tab close action to the page context menu",
   "keywords": [
     "browser",
@@ -7,17 +7,17 @@
     "tabs",
     "productivity"
   ],
-  "version": "1.7.0",
+  "version": "1.8.0",
   "author": {
-    "name": "Hansifer"
+    "name": "hansifer"
   },
-  "homepage": "https://github.com/hansifer/CloseTab",
+  "homepage": "https://github.com/hansifer/close-tab",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hansifer/CloseTab.git"
+    "url": "git://github.com/hansifer/close-tab.git"
   },
   "bugs": {
-    "url": "http://github.com/hansifer/CloseTab/issues"
+    "url": "http://github.com/hansifer/close-tab/issues"
   },
   "license": "MIT",
   "devDependencies": {
