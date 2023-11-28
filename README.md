@@ -1,6 +1,6 @@
 #### A browser extension that adds a tab close action to the page context menu
 
-Available for [Chrome](https://chrome.google.com/webstore/detail/closetab/lnchemdcmhoccciihokpdkkekmnejfhj)
+Available for [Chrome](https://chromewebstore.google.com/detail/close-tab/lnchemdcmhoccciihokpdkkekmnejfhj)
 
 <div align="center"><img src="https://hansifer.com/hosted-assets/close-tab/menu.png" width="390"></div>
 
