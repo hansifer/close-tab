@@ -21,3 +21,7 @@ Close Tab lets you close a web page with a right mouse click anywhere on the pag
 Close Tab has limited usefulness in macOS because macOS does not have customizable accelerator keys for menu items. The first letter of a menu item's title always serves as its accelerator key. Additionally, typing the first letter of a menu item only selects it; a subsequent Enter key press is required to activate it.
 
 It's for these reasons that a Safari port of Close Tab doesn't exist and Close Tab's options UI doesn't show the menu item shortcut key selector on macOS.
+
+#### Tech notes
+
+The technical simplicity of this extension allows it to be a vanilla JS implementation with native CSS and direct DOM calls. A benefit of this is the absence of a dev-time build step and dependencies (with the exception of `chrome` types).
