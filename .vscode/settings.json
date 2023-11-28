@@ -4,5 +4,11 @@
   "prettier.trailingComma": "all",
   "prettier.semi": true,
   "prettier.singleAttributePerLine": true,
-  "cSpell.words": ["hansifer"]
+  "cSpell.words": ["hansifer"],
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#620000",
+    "statusBar.debuggingBackground": "#620000",
+    "statusBar.noFolderBackground": "#620000",
+    "statussBar.prominentBackground": "#620000"
+  }
 }
