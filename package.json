@@ -1,13 +1,13 @@
 {
   "name": "close-tab",
+  "version": "1.8.0",
   "description": "A browser extension that adds a tab close action to the page context menu",
   "keywords": [
-    "browser",
-    "extension",
+    "productivity",
     "tabs",
-    "productivity"
+    "browser-extension",
+    "vanilla-js"
   ],
-  "version": "1.8.0",
   "author": {
     "name": "Hans Meyer"
   },
