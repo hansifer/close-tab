@@ -1,8 +1,8 @@
 {
   "name": "Close Tab",
   "version": "1.8.0",
-  "minimum_chrome_version": "91",
   "description": "Add a tab close action to the page context menu",
+  "minimum_chrome_version": "91",
   "default_locale": "en",
   "manifest_version": 3,
   "options_ui": {
@@ -28,8 +28,5 @@
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
-  "permissions": [
-    "contextMenus",
-    "storage"
-  ]
+  "permissions": ["contextMenus", "storage"]
 }
