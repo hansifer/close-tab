@@ -5,6 +5,7 @@
   "prettier.semi": true,
   "prettier.singleAttributePerLine": true,
   "cSpell.words": ["hansifer"],
+  "window.title": "${dirty}${activeEditorShort}${separator}close-tab",
   "workbench.colorCustomizations": {
     "statusBar.background": "#620000",
     "statusBar.debuggingBackground": "#620000",
